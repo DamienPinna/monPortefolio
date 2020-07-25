@@ -10,7 +10,7 @@ html {
 
 body {
    font-family: 'Poppins', sans-serif;
-   background: #f1f1f1;
+   background-color: #f1f1f1;
 }
 
 /* Navigation */
@@ -18,7 +18,7 @@ body {
    width: 300px;
    height: 100vh;
    min-height: 800px;
-   background: #333;
+   background-color: #333;
    position: fixed;
    top: 0px;
    left: 0px;
@@ -54,7 +54,7 @@ body {
    margin: 5px auto 0 auto;
    height: 2px;
    border-radius: 2px;
-   background: #aaa;
+   background-color: #aaa;
    transition: all 0.2s ease-out;
 }
 
@@ -125,7 +125,7 @@ body {
       height: 70px;
       border: 1px solid #f1f1f1;
       border-radius: 50%;
-      background: #333;
+      background-color: #333;
       position: fixed;
       top: 10px;
       left: 10px;
@@ -187,4 +187,107 @@ body {
       transform: rotate(-45deg);
       transition: bottom 300ms ease, transform 300ms 300ms ease;
    }
+}
+
+/* Accueil */
+.accueil {
+   background: url(./ressources/images/accueil.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: right;
+   height: 100vh;
+   min-height: 900px;
+   width: calc(100% - 300px);
+   margin-left: auto;
+   position: relative;
+}
+
+h1 {
+   font-size: 90px;
+   font-family: 'Abril Fatface', cursive;
+   margin: 0px 60px;
+   padding-top: 210px;
+}
+
+.texte-animation {
+   font-size: 30px;
+   margin: 10px 0px 10px 60px;
+}
+
+.btn-accueil {
+   display: inline-flex;
+   width: 200px;
+   height: 50px;
+   text-decoration: none;
+   background-color: #000;
+   justify-content: center;
+   align-items: center;
+   color: #f1f1f1;
+   margin-top: 10px;
+   border-radius: 2px;
+   font-size: 18px;
+}
+
+.btn-accueil1 {
+   margin: 10px 0px 0px 60px;
+}
+
+.btn-accueil2 {
+   background: transparent;
+   border: 2px solid #000;
+   color: #000;
+   font-weight: 700;
+}
+
+.medias {
+   display: flex;
+   margin-left: 60px;
+   margin-top: 30px;
+}
+
+.media {
+   width: 60px;
+   height: 60px;
+   background-color: #333;
+   border-radius: 50%;
+   margin-right: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+}
+
+.media2 {
+   background: transparent;
+   border: 2px solid #333;
+}
+
+.icone-medias {
+   width: 30px;
+}
+
+.btn-rond {
+   width: 70px;
+   height: 70px;
+   position: absolute;
+   bottom: 20px;
+   left: 60px;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   box-shadow: 0 0 0 0 #333;
+   background-color: #333;
+   animation: pulse 1.3s infinite;
+}
+
+@keyframes pulse {
+   to {
+      box-shadow: 0 0 0 8px rgba(255,255,255,0.01);
+   }
+}
+
+.logo-btn {
+   width: 35px;
 }
