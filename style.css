@@ -266,7 +266,7 @@ h1 {
    width: 30px;
 }
 
-.btn-rond {
+.btn-rond-fleche {
    width: 70px;
    height: 70px;
    position: absolute;
@@ -288,6 +288,147 @@ h1 {
    }
 }
 
-.logo-btn {
+.logo-btn-fleche {
    width: 35px;
+}
+
+@media screen and (max-width: 1300px) {
+   .accueil {
+      width: 100%;
+      background-position: center;
+   }
+}
+
+@media screen and (max-width: 1000px) {
+   .accueil {
+      height: 700px;
+      min-height: 0px;
+   }
+
+   h1 {
+      font-size: 70px;
+      margin: 0 30px;
+      padding-top: 100px;
+   }
+
+   .accueil p {
+      margin: 20px 0px 20px 30px;
+   }
+
+   .btn-accueil1 {
+      margin: 10px 0px 0px 30px;
+   }
+
+   .medias {
+      margin-left: 30px;
+   }
+
+   .btn-rond-fleche {
+      display: none;
+   }
+}
+
+@media screen and (max-width: 700px) {
+   h1 {
+      font-size: 50px;
+      margin: 0px 30px;
+   }
+
+   .accueil {
+      height: 600px;
+   }
+
+   .accueil p {
+      font-size: 20px;
+   }
+
+   .btn-rond-menu {
+      width: 60px;
+      height: 60px;
+   }
+}
+
+@media screen and (max-width: 500px) {
+   h1 {
+      font-size: 35px;
+   }
+
+   .accueil p {
+      font-size: 16px;
+   }
+
+   .btn-accueil {
+      width: 120px;
+      font-size: 13px;
+      height: 40px;
+      margin: 10px 0px 0px 5px;
+   }
+
+   .btn-accueil1 {
+      margin: 10px 0px 0px 30px;
+   }
+
+   .media {
+      width: 40px;
+      height: 40px;
+   }
+
+   .icone-medias {
+      width: 20px;
+   }
+}
+
+@media screen and (max-width: 450px) {
+   h1 {
+      margin: 0px 30px 0px 5px;
+      padding-top: 120px;
+   }
+
+   .btn-rond-menu {
+      width: 50px;
+      height: 50px;
+   }
+
+   .container-lignes {
+      width: 20px;
+      height: 38px;
+   }
+
+   .ligne {
+      height: 3px;
+   }
+
+   .ligne::before {
+      bottom: 8px;
+      height: 3px;
+   }
+
+   .ligne::after {
+      bottom: 8px;
+      height: 3px;
+   }
+
+   .accueil {
+      height: 500px;
+   }
+
+   .accueil p {
+      margin: 30px 0px 0px 5px;
+   }
+
+   .btn-accueil {
+      width: 100px;
+      font-size: 12px;
+      height: 35px;
+      margin: 30px 0px 0px 5px;
+   }
+
+   .medias {
+      margin-top: 30px;
+      margin-left: 5px;
+   }
+
+   .icone-medias {
+      width: 20px;
+   }
 }
