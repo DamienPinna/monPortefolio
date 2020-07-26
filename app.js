@@ -45,5 +45,5 @@ typewriter
    .typeString("<span style='color: #349717;'> Node.js</span> !")
    .pauseFor(1000)
    .deleteChars(9)
-   .typeString("<span style='color: #ff6910;'> Full-Stack JS !")
+   .typeString("<span style='color: #ff6910;'> Full-Stack JS</span> !")
    .start();

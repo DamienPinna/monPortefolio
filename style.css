@@ -432,3 +432,212 @@ h1 {
       width: 20px;
    }
 }
+
+@media screen and (max-width: 925px) {
+   .texte-animation {
+      font-size: 25px !important;
+   }
+}
+
+@media screen and (max-width: 785px) {
+   .texte-animation {
+      font-size: 20px !important;
+   }
+}
+
+@media screen and (max-width: 640px) {
+   .texte-animation {
+      font-size: 15px !important;
+   }
+}
+
+@media screen and (max-width: 492px) {
+   .texte-animation {
+      font-size: 13px !important;
+   }
+}
+
+@media screen and (max-width: 410px) {
+   .texte-animation {
+      font-size: 17px !important;
+   }
+}
+
+@media screen and (max-width: 300px) {
+   .texte-animation {
+      font-size: 13px !important;
+   }
+}
+
+/* Section présentation */
+.presentation {
+   width: 100%;
+   position: relative;
+   overflow: hidden;
+   border-top: 1px dashed #333;
+   border-bottom: 1px dashed #333;
+   color: #e7e7e7;
+}
+
+.fond-forme {
+   background-color: #485563;
+   background-image: linear-gradient(to right, #29323c, #485563);
+   width: 2300px;
+   height: 1000px;
+   position: absolute;
+   transform: rotate(-45deg) translateX(100px) translateY(-15px);
+   z-index: -1;
+}
+
+.titre-presentation {
+   font-size: 40px;
+   text-align: center;
+   margin: 50px 0px 70px 0px;
+   padding-left: 300px;
+}
+
+.container-presentation {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-shrink: 0;
+   margin: 50px 0px 150px 0px;
+   padding-left: 300px;
+}
+
+.presentation-gauche {
+   width: 600px;
+   flex-shrink: 0;
+   margin-bottom: 50px;
+   padding-left: 120px;
+   padding-top: 20px;
+}
+
+.presentation-gauche h3 {
+   text-align: center;
+   font-size: 25px;
+   letter-spacing: 2px;
+}
+
+.presentation-gauche hr {
+   width: 60px;
+   margin: 0px auto 20px auto;
+}
+
+.presentation-gauche p {
+   text-align: justify;
+}
+
+.presentation-droite {
+   width: 600px;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   flex-shrink: 0;
+   padding-top: 20px;
+}
+
+.presentation-droite h3 {
+   text-align: center;
+   font-size: 25px;
+   letter-spacing: 1px;
+}
+
+.liste-presentation {
+   list-style-type: none;
+   padding: 10px 0px 50px 110px;
+}
+
+.chiffre-style {
+   font-family: 'Abril Fatface', cursive;
+   font-size: 40px;
+}
+
+.texte-liste {
+   font-size: 27px;
+   display: inline;
+}
+
+@media screen and (max-width: 1400px) {
+   .liste-presentation {
+      padding-left: 80px;
+   }
+}
+
+@media screen and (max-width: 1300px) {
+   .liste-presentation {
+      padding-left: 110px;
+   }
+
+   .container-presentation {
+      padding-left: 0px;
+   }
+
+   .titre-presentation {
+      padding-left: 0px;
+   }
+}
+
+@media screen and (max-width: 1100px) {
+   .fond-forme {
+      width: 100%;
+      height: 150%;
+      transform: rotate(0) translateX(0) translateY(0);
+   }
+
+   .titre-presentation {
+      margin: 0px 0px 20px 0px;
+      padding-top: 50px;
+   }
+
+   .container-presentation {
+      flex-direction: column;
+   }
+
+   .presentation-gauche {
+      width: 80%;
+      flex-shrink: 1;
+      margin-bottom: 10px;
+      padding: 20px 0px;
+   }
+
+   .presentation-gauche h3,
+   .presentation-droite h3 {
+      font-size: 20px;
+      letter-spacing: 0px;
+   }
+
+   .presentation-gauche p {
+      font-size: 16px;
+   }
+
+   .presentation-droite {
+      width: 80%;
+      flex-shrink: 1;
+   }
+
+   .liste-presentation {
+      padding: 0px;
+   }
+}
+
+@media screen and (max-width: 700px) {
+   .container-presentation {
+      margin-top: 10px;
+      margin-bottom: 70px;
+   }
+
+   .titre-presentation {
+      font-size: 24px;
+      margin: 0px 10px;
+   }
+
+   .chiffre-style {
+      font-size: 30px;
+   }
+
+   .texte-liste {
+      font-size: 17px;
+   }
+}
