@@ -840,7 +840,7 @@ h1 {
 }
 
 .b5 {
-   width: 20%;
+   width: 45%;
    background-color: rgb(167, 146, 243);
 }
 
@@ -913,5 +913,146 @@ h1 {
 
    .barre-grise {
       width: 300px;
+   }
+}
+
+/* Section expérience */
+
+.travail-experience {
+   width: calc(100% - 300px);
+   height: auto;
+   margin-left: auto;
+   padding-bottom: 100px;
+}
+
+.titre-travail-experience {
+   text-align: center;
+   margin: 70px 0px;
+   font-size: 40px;
+   color: #333;
+}
+
+.container-experience-travail {
+   position: relative;
+   display: flex;
+   justify-content: center;
+}
+
+.barre-verticale {
+   height: 1000px;
+   width: 5px;
+   background-color: #000;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   position: relative;
+   left: -30px;
+}
+
+.boule-icon {
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   border: 1px solid #333;
+   background-color: #f1f1f1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.boule-icon img {
+   width: 25px;
+}
+
+.flex-container-bloc-experience {
+   width: 800px;
+   flex-shrink: 1;
+   height: 1000px;
+   position: relative;
+}
+
+.bloc {
+   width: 100%;
+   height: 200px;
+   margin-bottom: 37.5px;
+   cursor: pointer;
+   border: 1px solid #333;
+   position: relative;
+}
+
+.contenu-bloc {
+   padding: 20px;
+   width: 100%;
+   height: 100%;
+   border: 2px solid #000;
+   background-color: #fff;
+   transition: transform 0.25s ease-in-out;
+   position: relative;
+   transform: translate(10px, -10px);
+}
+
+.contenu-bloc:hover {
+   transform: translate(0px, 0px);
+}
+
+.bloc1 {
+   background-color: #fb97a0;
+}
+.bloc2 {
+   background-color: #bfe2ca;
+}
+.bloc3 {
+   background-color: #a6daef;
+}
+.bloc4 {
+   background-color: #d0e2ec;
+}
+
+.titre-section-bloc {
+   font-family: 'Abril Fatface', sans-serif;
+   font-size: 25px;
+   padding-bottom: 10px;
+}
+
+@media screen and (max-width: 1300px) {
+   .travail-experience {
+      width: 100%;
+   }
+}
+
+@media screen and (max-width: 950px) {
+   .barre-verticale {
+      height: 1200px;
+      margin-left: 60px;
+   }
+
+   .bloc {
+      height: 250px;
+      margin-bottom: 37.5px;
+   }
+
+   .flex-container-bloc-experience {
+      margin-right: 30px;
+   }
+}
+
+@media screen and (max-width: 520px) {
+   .barre-verticale {
+      height: 1800px;
+   }
+
+   .bloc {
+      height: 400px;
+   }
+
+   .texte-section {
+      font-size: 16px;
+   }
+}
+
+@media screen and (max-width: 380px) {
+   .texte-section {
+      font-size: 15px;
    }
 }
