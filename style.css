@@ -21,7 +21,7 @@ body {
    background-color: #333;
    position: fixed;
    top: 0px;
-   left: 0px;
+   left: -300px;
    border-right: 1px dashed #f1f1f1;
    z-index: 5;
    transition: all 0.2s ease-in-out;
@@ -751,7 +751,7 @@ h1 {
    }
 
    .item {
-      height: 435px;
+      height: 430px;
    }
 
    .container-img-portefolio {

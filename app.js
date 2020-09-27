@@ -53,7 +53,6 @@ typewriter
    .start();
 
    // Animation contact
-
    const input_fields = document.querySelectorAll('input');
 
    input_fields.forEach( field => {
@@ -65,3 +64,23 @@ typewriter
          }
       });
    });
+
+// Animation GSAP + ScrollMagic
+const navbar = document.querySelector('.nav-gauche');
+const titre = document.querySelector('h1');
+const btn = document.querySelectorAll('.btn-accueil');
+const btnMedias = document.querySelectorAll('.media');
+const btnRondAccueil = document.querySelector('.btn-rond-fleche');
+
+const TL1 = gsap.timeline({paused: true});
+
+TL1
+.to(navbar, {left: '0px', ease: Power3.easeOut, duration: 0.6})
+.from(titre, {y: -50, opacity: 0, ease: Power3.easeOut, duration: 0.4})
+.staggerFrom(btn, 1, {opacity: 0}, 0.2, '-=0.30')
+.staggerFrom(btnMedias, 1, {opacity: 0}, 0.2, '-=0.75')
+.from(btnRondAccueil, {y: -50, opacity: 0, ease: Power3.easeOut, duration: 0.4}, '-=1');
+
+window.addEventListener('load', () => {
+   TL1.play();
+});
