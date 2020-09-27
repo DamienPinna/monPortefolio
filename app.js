@@ -149,3 +149,30 @@ const scenePortfolioVague1 = new ScrollMagic.Scene({
 // .setTween(tlPortfolioVague2)
 // // .addIndicators()
 // .addTo(controller)
+
+// Animation Compétences
+
+const sectionCompetences = document.querySelector('.section-range');
+const titreCompetences = document.querySelector('.titre-competences');
+const allLabels = document.querySelectorAll('.label-skill');
+const allPourcents = document.querySelectorAll('.number-skill');
+const allBarres = document.querySelectorAll('.barre-skill');
+const allGreyBarres = document.querySelectorAll('.barre-grise');
+
+const tlCompetences = new TimelineMax();
+
+tlCompetences
+.from(titreCompetences, {opacity: 0, duration: 0.6})
+.staggerFrom(allLabels, 0.5, {y: -50, opacity: 0}, 0.1, '-=0.5')
+.staggerFrom(allPourcents, 0.5, {y: -10, opacity: 0}, 0.1, '-=1')
+.staggerFrom(allBarres, 0.5, {y: -10, opacity: 0}, 0.1, '-=1')
+.staggerFrom(allGreyBarres, 0.5, {y: -10, opacity: 0}, 0.1, '-=1')
+
+const sceneCompetences = new ScrollMagic.Scene({
+   triggerElement: sectionCompetences,
+   triggerHook: 0.5,
+   reverse: false
+})
+.setTween(tlCompetences)
+// .addIndicators()
+.addTo(controller)
