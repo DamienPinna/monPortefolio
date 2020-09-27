@@ -51,3 +51,17 @@ typewriter
    .pauseFor(1000)
    .typeString("<span style='color: #ff6910;'> Passionné</span> !")
    .start();
+
+   // Animation contact
+
+   const input_fields = document.querySelectorAll('input');
+
+   input_fields.forEach( field => {
+      field.addEventListener('input', e => {
+         if(e.target.value !== '') {
+            e.target.parentNode.classList.add('animation');
+         } else {
+            e.target.parentNode.classList.remove('animation');
+         }
+      });
+   });
