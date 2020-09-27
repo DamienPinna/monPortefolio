@@ -65,16 +65,16 @@ typewriter
       });
    });
 
-// Animation GSAP + ScrollMagic
+// Animation GSAP Accueil
 const navbar = document.querySelector('.nav-gauche');
 const titre = document.querySelector('h1');
 const btn = document.querySelectorAll('.btn-accueil');
 const btnMedias = document.querySelectorAll('.media');
 const btnRondAccueil = document.querySelector('.btn-rond-fleche');
 
-const TL1 = gsap.timeline({paused: true});
+const tlAccueil = gsap.timeline({paused: true});
 
-TL1
+tlAccueil
 .to(navbar, {left: '0px', ease: Power3.easeOut, duration: 0.6})
 .from(titre, {y: -50, opacity: 0, ease: Power3.easeOut, duration: 0.4})
 .staggerFrom(btn, 1, {opacity: 0}, 0.2, '-=0.30')
@@ -82,5 +82,31 @@ TL1
 .from(btnRondAccueil, {y: -50, opacity: 0, ease: Power3.easeOut, duration: 0.4}, '-=1');
 
 window.addEventListener('load', () => {
-   TL1.play();
+   tlAccueil.play();
 });
+
+// Animation GSAP + scrollMagic Présentation
+const presentationContainer = document.querySelector('.presentation');
+const titrePresentation = document.querySelector('.titre-presentation');
+const titreAtout = document.querySelector('.titre-atout');
+const presentationGauche = document.querySelector('.presentation-gauche');
+const listePresentation = document.querySelectorAll('.item-liste');
+
+const tlPresentation = new TimelineMax();
+
+tlPresentation
+.from(titrePresentation, {y: -200, opacity: 0, duration: 0.6})
+.from(titreAtout, {y: -200, opacity: 0, duration: 0.6})
+.from(presentationGauche, {y: -20, opacity: 0, duration: 0.6}, '-=0.5')
+.staggerFrom(listePresentation, 1, {opacity: 0}, 0.2, '-=0.5');
+
+const controller = new ScrollMagic.Controller();
+
+const scene = new ScrollMagic.Scene({
+   triggerElement: presentationContainer,
+   triggerHook: 0.5,
+   reverse: false
+})
+.setTween(tlPresentation)
+.addIndicators()
+.addTo(controller)
