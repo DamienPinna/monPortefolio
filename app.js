@@ -102,11 +102,50 @@ tlPresentation
 
 const controller = new ScrollMagic.Controller();
 
-const scene = new ScrollMagic.Scene({
+const scenePresentation = new ScrollMagic.Scene({
    triggerElement: presentationContainer,
    triggerHook: 0.5,
    reverse: false
 })
 .setTween(tlPresentation)
-.addIndicators()
+// .addIndicators()
 .addTo(controller)
+
+// Animation GSAP + scrollMagic Portfolio
+const portfolioContainer = document.querySelector('.portfolio');
+const titrePortfolio = document.querySelector('.titre-portfolio');
+const itemPortfolioVague1 = document.querySelectorAll('.vague1');
+
+const tlPortfolioVague1 = new TimelineMax();
+
+tlPortfolioVague1
+.from(titrePortfolio, {y: -50, opacity: 0, duration: 0.5})
+.staggerFrom(itemPortfolioVague1, 1, {opacity: 0}, 0.2, '-=0.5');
+
+const scenePortfolioVague1 = new ScrollMagic.Scene({
+   triggerElement: portfolioContainer,
+   triggerHook: 0.5,
+   reverse: false
+})
+.setTween(tlPortfolioVague1)
+// .addIndicators()
+.addTo(controller)
+
+/**
+ * Vague 2
+ */
+// const itemPortfolioVague2 = document.querySelectorAll('.vague2');
+
+// const tlPortfolioVague2 = new TimelineMax();
+
+// tlPortfolioVague2
+// .staggerFrom(itemPortfolioVague2, 1, {opacity: 0}, 0.2, '-=0.5');
+
+// const scenePortfolioVague2 = new ScrollMagic.Scene({
+//    triggerElement: itemPortfolioVague1,
+//    triggerHook: 0.2,
+//    reverse: false
+// })
+// .setTween(tlPortfolioVague2)
+// // .addIndicators()
+// .addTo(controller)

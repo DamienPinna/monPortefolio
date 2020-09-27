@@ -642,19 +642,19 @@ h1 {
    }
 }
 
-/* Section portefolio */
-.portefolio {
+/* Section portfolio */
+.portfolio {
    width: 100%;
 }
 
-.titre-portefolio {
+.titre-portfolio {
    text-align: center;
    padding: 50px 0px;
    font-size: 50px;
    padding-left: 300px;
 }
 
-.container-portefolio {
+.container-portfolio {
    width: 100%;
    height: auto;
    margin: 0px auto 100px auto;
@@ -679,13 +679,13 @@ h1 {
    transform: translateY(-5px);
 }
 
-.container-img-portefolio {
+.container-img-portfolio {
    width: 100%;
    height: 220px;
    overflow: hidden;
 }
 
-.container-img-portefolio img {
+.container-img-portfolio img {
    width: 100%;
    height: auto;
 }
@@ -733,11 +733,11 @@ h1 {
 }
 
 @media screen and (max-width: 1300px) {
-   .container-portefolio {
+   .container-portfolio {
       padding-left: 0px;
    }
 
-   .titre-portefolio {
+   .titre-portfolio {
       font-size: 40px;
       margin: 50px 0px 70px;
       padding-left: 0px;
@@ -745,7 +745,7 @@ h1 {
 }
 
 @media screen and (max-width: 500px) {
-   .titre-portefolio {
+   .titre-portfolio {
       margin: 10px 0px;
       padding: 30px 0px;
    }
@@ -754,7 +754,7 @@ h1 {
       height: 430px;
    }
 
-   .container-img-portefolio {
+   .container-img-portfolio {
       height: auto;
    }
 }
@@ -875,6 +875,14 @@ h1 {
    .grille-skill {
       grid-template: repeat(6, 80px) / 600px;
       padding-left: 0px;
+   }
+ 
+   .b3 {
+      background-color: rgb(167, 146, 243);
+   }
+   
+   .b4 {
+      background-color: rgb(243, 237, 146);
    }
 
    .barre-grise {
