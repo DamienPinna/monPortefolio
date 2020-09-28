@@ -647,6 +647,10 @@ h1 {
    width: 100%;
 }
 
+.bold {
+   font-weight: bold;
+}
+
 .titre-portfolio {
    text-align: center;
    padding: 50px 0px;
@@ -668,7 +672,7 @@ h1 {
 .item {
    margin: 20px;
    width: 420px;
-   height: 400px;
+   height: 436px;
    background-color: #f0f2f0;
    color: #333;
    transition: transform 0.3s ease-out;
@@ -751,7 +755,7 @@ h1 {
    }
 
    .item {
-      height: 430px;
+      height: 466px;
    }
 
    .container-img-portfolio {
@@ -761,7 +765,7 @@ h1 {
 
 @media screen and (max-width: 340px) {
    .item {
-      height: 390px;
+      height: 426px;
    }
 }
 
