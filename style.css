@@ -1039,13 +1039,7 @@ h1 {
 
 @media screen and (max-width: 950px) {
    .barre-verticale {
-      /* height: 1200px; */
       margin-left: 60px;
-   }
-
-   .bloc {
-      /* height: 500px; */
-      /* margin-bottom: 37.5px; */
    }
 
    .flex-container-bloc-experience {
