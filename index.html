@@ -3,6 +3,7 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
       <title>portfolio Damien PINNA</title>
       <link rel="stylesheet" href="./prefixed/style.css">
       <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins&display=swap" rel="stylesheet">
@@ -301,22 +302,25 @@
          <h2><strong>Rentrons</strong> en contact<br>(Non fonctionnel pour le moment)</h2>
 
          <div class="container-form">
-            <form action="#" method="POST" class="form-bloc">
+            <form id="contact-form" action="#" method="POST" class="form-bloc">
 
                <div class="form-groupe">
                   <label for="prenom">Prénom</label>
-                  <input type="text" required maxlength="16" id="prenom" name="prenom">
+                  <input type="text" maxlength="16" id="prenom" name="prenom">
+                  <p class="comments"></p>
                </div>
                <div class="form-groupe">
                   <label for="nom">Nom</label>
-                  <input type="text" required maxlength="16" id="nom" name="nom">
+                  <input type="text" maxlength="16" id="nom" name="nom">
+                  <p class="comments"></p>
                </div>
                <div class="form-groupe">
                   <label for="nom">Email</label>
-                  <input type="email" required maxlength="16" id="email" name="email">
+                  <input type="email" maxlength="30" id="email" name="email">
+                  <p class="comments"></p>
                </div>
                <div class="form-groupe">
-                  <textarea name="message" id="message" placeholder="Votre message" required></textarea>
+                  <textarea id="message" name="message" placeholder="Votre message"></textarea>
                </div>
                <div class="form-groupe">
                   <input type="submit" value="ENVOYER" class="btn-submit">

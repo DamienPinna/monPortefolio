@@ -1,7 +1,15 @@
+// const axios = require('axios');
 const btnRondMenu = document.querySelector('.btn-rond-menu');
+const contactForm = document.querySelector('#contact-form');
 const containerLignes = document.querySelector('.container-lignes');
 const navGauche = document.querySelector('.nav-gauche');
 const allNavMenuItem = document.querySelectorAll('.nav-menu-item');
+
+// Inputs formulaire
+const inputPrenom = document.querySelector('#prenom');
+const inputNom = document.querySelector('#nom');
+const inputEmail = document.querySelector('#email');
+const inputMessage = document.querySelector('#message');
 
 btnRondMenu.addEventListener('click', () => {
    containerLignes.classList.toggle('active');
@@ -16,6 +24,7 @@ if(window.matchMedia('(max-width: 1300px)')) {
       });
    });
 }
+
 
 // Animation écriture
 const texteAnimation = document.querySelector('.texte-animation');
@@ -52,18 +61,20 @@ typewriter
    .typeString("<span style='color: #ff6910;'> Passionné</span> !")
    .start();
 
-   // Animation contact
-   const input_fields = document.querySelectorAll('input');
 
-   input_fields.forEach( field => {
-      field.addEventListener('input', e => {
-         if(e.target.value !== '') {
-            e.target.parentNode.classList.add('animation');
-         } else {
-            e.target.parentNode.classList.remove('animation');
-         }
-      });
+// Animation contact
+const input_fields = document.querySelectorAll('input');
+
+input_fields.forEach( field => {
+   field.addEventListener('input', e => {
+      if(e.target.value !== '') {
+         e.target.parentNode.classList.add('animation');
+      } else {
+         e.target.parentNode.classList.remove('animation');
+      }
    });
+});
+
 
 // Animation GSAP Accueil
 const navbar = document.querySelector('.nav-gauche');
@@ -84,6 +95,7 @@ tlAccueil
 window.addEventListener('load', () => {
    tlAccueil.play();
 });
+
 
 // Animation GSAP + scrollMagic Présentation
 const presentationContainer = document.querySelector('.presentation');
@@ -110,6 +122,7 @@ const scenePresentation = new ScrollMagic.Scene({
 .setTween(tlPresentation)
 // .addIndicators()
 .addTo(controller)
+
 
 // Animation GSAP + scrollMagic Portfolio
 const portfolioContainer = document.querySelector('.portfolio');
@@ -150,8 +163,8 @@ const scenePortfolioVague1 = new ScrollMagic.Scene({
 // // .addIndicators()
 // .addTo(controller)
 
-// Animation Compétences
 
+// Animation Compétences
 const sectionCompetences = document.querySelector('.section-range');
 const titreCompetences = document.querySelector('.titre-competences');
 const allLabels = document.querySelectorAll('.label-skill');
@@ -176,3 +189,56 @@ const sceneCompetences = new ScrollMagic.Scene({
 .setTween(tlCompetences)
 // .addIndicators()
 .addTo(controller)
+
+
+// Formulaire de contact
+// $(function(){
+//    $('#contact-form').submit(function(event){
+      
+//        event.preventDefault();
+//        $('.comments').empty();
+//        var postdata = $('#contact-form').serialize();
+       
+//        $.ajax({
+//            type: 'POST',
+//            url: 'contact.php',
+//            data: postdata,
+//            dataType: 'json',
+//            success: function(result) {
+//                if(result.isSuccess){
+//                    $('#contact-form').append("<p class='thank-you'>Votre message a bien été envoyé. Merci de m'avoir contacté</p>");
+//                    $('#contact-form')[0].reset();
+//                } else {
+//                    $('#firstname + .comments').html(result.firstnameError);
+//                    $('#name + .comments').html(result.nameError);
+//                    $('#email + .comments').html(result.emailError);
+//                    $('#message + .comments').html(result.messageError);
+//                }
+//            }
+//        });
+//    });
+// });
+
+document.addEventListener("DOMContentLoaded", function() {
+   contactForm.addEventListener('submit', event => {
+      event.preventDefault();
+
+      const dataForm = {
+         prenom: inputPrenom.value,
+         nom: inputNom.value,
+         email: inputEmail.value,
+         message: inputMessage.value,
+      }
+      fetch('contact.php', {
+         method: 'POST',
+         hearders: {
+            'Content-Type': 'application/json'
+         },
+         body: JSON.stringify(dataForm)
+      })
+      .then( response => {
+         response.text()
+         .then( text => console.log(text));
+      });
+   });
+});
