@@ -3,7 +3,7 @@
     $array = array("prenom" => "", "nom" => "", "email" => "", "message" => "", "prenomError" => "", "nomError" => "", "emailError" => "", "messageError" => "", "isSuccess" => false);
         
     $emailTo = "damien.pinna@gmail.com";
-
+    
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         $array['prenom'] = verifyInput($_POST['prenom']);
         $array['nom'] = verifyInput($_POST['nom']);

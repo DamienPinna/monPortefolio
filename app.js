@@ -1,4 +1,3 @@
-// const axios = require('axios');
 const btnRondMenu = document.querySelector('.btn-rond-menu');
 const contactForm = document.querySelector('#contact-form');
 const containerLignes = document.querySelector('.container-lignes');
@@ -192,53 +191,29 @@ const sceneCompetences = new ScrollMagic.Scene({
 
 
 // Formulaire de contact
-// $(function(){
-//    $('#contact-form').submit(function(event){
+$(function(){
+   $('#contact-form').submit(function(event){
       
-//        event.preventDefault();
-//        $('.comments').empty();
-//        var postdata = $('#contact-form').serialize();
-       
-//        $.ajax({
-//            type: 'POST',
-//            url: 'contact.php',
-//            data: postdata,
-//            dataType: 'json',
-//            success: function(result) {
-//                if(result.isSuccess){
-//                    $('#contact-form').append("<p class='thank-you'>Votre message a bien été envoyé. Merci de m'avoir contacté</p>");
-//                    $('#contact-form')[0].reset();
-//                } else {
-//                    $('#firstname + .comments').html(result.firstnameError);
-//                    $('#name + .comments').html(result.nameError);
-//                    $('#email + .comments').html(result.emailError);
-//                    $('#message + .comments').html(result.messageError);
-//                }
-//            }
-//        });
-//    });
-// });
+       event.preventDefault();
+       $('.comments').empty();
+       var postdata = $('#contact-form').serialize();
 
-document.addEventListener("DOMContentLoaded", function() {
-   contactForm.addEventListener('submit', event => {
-      event.preventDefault();
-
-      const dataForm = {
-         prenom: inputPrenom.value,
-         nom: inputNom.value,
-         email: inputEmail.value,
-         message: inputMessage.value,
-      }
-      fetch('contact.php', {
-         method: 'POST',
-         hearders: {
-            'Content-Type': 'application/json'
-         },
-         body: JSON.stringify(dataForm)
-      })
-      .then( response => {
-         response.text()
-         .then( text => console.log(text));
-      });
+       $.ajax({
+           type: 'POST',
+           url: 'contact.php',
+           data: postdata,
+           dataType: 'json',
+           success: function(result) {
+               if(result.isSuccess){
+                   $('#contact-form').append("<p class='thank-you'>Votre message a bien été envoyé. Merci de m'avoir contacté</p>");
+                   $('#contact-form')[0].reset();
+               } else {
+                   $('#firstname + .comments').html(result.firstnameError);
+                   $('#name + .comments').html(result.nameError);
+                   $('#email + .comments').html(result.emailError);
+                   $('#message + .comments').html(result.messageError);
+               }
+           }
+       });
    });
 });
