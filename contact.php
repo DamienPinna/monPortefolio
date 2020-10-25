@@ -1,46 +1,46 @@
 <?php
 
-    $array = array("prenom" => "", "nom" => "", "email" => "", "message" => "", "prenomError" => "", "nomError" => "", "emailError" => "", "messageError" => "", "isSuccess" => false);
+    $arrayError = array("prenomError" => "", "nomError" => "", "emailError" => "", "messageError" => "", "isSuccess" => false);
         
     $emailTo = "damien.pinna@gmail.com";
     
     if($_SERVER["REQUEST_METHOD"] == "POST"){
-        $array['prenom'] = verifyInput($_POST['prenom']);
-        $array['nom'] = verifyInput($_POST['nom']);
-        $array['email'] = verifyInput($_POST['email']);
-        $array['message'] = verifyInput($_POST['message']);
-        $array['isSuccess'] = true;
+        $prenom = verifyInput($_POST['prenom']);
+        $nom = verifyInput($_POST['nom']);
+        $email = verifyInput($_POST['email']);
+        $message = verifyInput($_POST['message']);
+        $arrayError['isSuccess'] = true;
         $emailText = "";
         
-        if(empty($array['prenom'])){
-            $array['prenomError'] = "Il faut renseigner votre prénom !";
-            $array['isSuccess'] = false;
+        if(empty($prenom)){
+            $arrayError['prenomError'] = "Il faut renseigner votre prénom !";
+            $arrayError['isSuccess'] = false;
         } else {
-            $emailText .= "Prénom = {$array['prenom']}\n";
+            $emailText .= "Prénom = {$prenom}\n";
         }
-        if(empty($array['nom'])){
-            $array['nomError'] = "Il faut renseigner votre nom !";
-            $array['isSuccess'] = false;
+        if(empty($nom)){
+            $arrayError['nomError'] = "Il faut renseigner votre nom !";
+            $arrayError['isSuccess'] = false;
         } else {
-            $emailText .= "Nom = {$array['nom']}\n";
+            $emailText .= "Nom = {$nom}\n";
         }
-        if(!isEmail($array['email'])){
-            $array['emailError'] = "Email non renseigné ou non valide !";
-            $array['isSuccess'] = false;
+        if(!isEmail($email)){
+            $arrayError['emailError'] = "Email non renseigné ou non valide !";
+            $arrayError['isSuccess'] = false;
         } else {
-            $emailText .= "Email = {$array['email']}\n";
+            $emailText .= "Email = {$email}\n";
         }
-        if(empty($array['message'])){
-            $array['messageError'] = "Il faut écrire un message !";
-            $array['isSuccess'] = false;
+        if(empty($message)){
+            $arrayError['messageError'] = "Il faut écrire un message !";
+            $arrayError['isSuccess'] = false;
         } else {
-            $emailText .= "Message = {$array['message']}\n";
+            $emailText .= "Message = {$message}\n";
         }
-        if ($array['isSuccess']){
-            $headers = "De: {$array['prenom']} {$array['nom']} <{$array['email']}>\r\nRépondre sur: {$array['email']}";
+        if ($arrayError['isSuccess']){
+            $headers = "De: {$prenom} {$nom} <{$email}>\r\nRépondre sur: {$email}";
             mail($emailTo, "Message du potfolio", $emailText, $headers);
         }
-        echo json_encode($array);
+        echo json_encode($arrayError);
     }
 
     function isEmail($var){
