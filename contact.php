@@ -38,7 +38,7 @@
         }
         if ($array['isSuccess']){
             $headers = "De: {$array['prenom']} {$array['nom']} <{$array['email']}>\r\nRépondre sur: {$array['email']}";
-            mail($emailTo, "Un message de votre site", $emailText, $headers);
+            mail($emailTo, "Message du potfolio", $emailText, $headers);
         }
         echo json_encode($array);
     }

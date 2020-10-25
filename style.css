@@ -191,7 +191,7 @@ body {
 
 /* Accueil */
 .accueil {
-   background: url(./ressources/images/accueil.jpg);
+   background: url(../ressources/images/accueil.jpg);
    background-repeat: no-repeat;
    background-size: cover;
    background-position: right;
@@ -1141,7 +1141,7 @@ h1 {
 .section-parallax {
    width: 100%;
    height: 250px;
-   background: url(ressources/images/accueil.jpg) no-repeat right / cover fixed;
+   background: url(../ressources/images/accueil.jpg) no-repeat right / cover fixed;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -1216,6 +1216,7 @@ h1 {
 .form-groupe {
    position: relative;
    display: flex;
+   flex-direction: column;
    margin-bottom: 45px;
 }
 
@@ -1287,6 +1288,21 @@ textarea:focus {
    color: #fff;
    background-position: 100%;
    border: 3px solid #fff;
+}
+
+.comments{
+   font-style: italic;
+   font-size: 18px;
+   color: red;
+   height: 25px;
+}
+
+.thank-you {
+   color: red;
+   text-align: center;
+   margin-top: 15px;
+   font-weight: bold;
+   font-size: 22px;
 }
 
 @media screen and (max-width: 1300px) {
