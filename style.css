@@ -661,7 +661,7 @@ h1 {
 .container-portfolio {
    width: 100%;
    height: auto;
-   margin: 0px auto 100px auto;
+   margin: 0px auto 40px auto;
    padding-left: 300px;
    display: flex;
    justify-content: center;
@@ -743,8 +743,14 @@ h1 {
 
    .titre-portfolio {
       font-size: 40px;
-      margin: 50px 0px 70px;
+      margin: 38px 0px 20px;
       padding-left: 0px;
+   }
+}
+
+@media screen and (max-width: 936px) {
+   .container-portfolio {
+      margin: 0px auto 8px;
    }
 }
 

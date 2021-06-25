@@ -38,7 +38,7 @@ typewriter
    .changeDelay(90)
    .typeString("Moi c'est Damien PINNA")
    .changeDelay(70)
-   .typeString("<strong>, Développeur Junior</strong><span style='color: #ea39ff;'> HTML</span> ?")
+   .typeString("<strong>, Développeur</strong><span style='color: #ea39ff;'> HTML</span> ?")
    .pauseFor(1000)
    .deleteChars(6)
    .typeString("<span style='color: #03A9F4;'> CSS</span> ?")
@@ -50,13 +50,9 @@ typewriter
    .typeString("<span style='color: #287242;'> Vue.js</span> ?")
    .pauseFor(1000)
    .deleteChars(8)
-   .typeString("<span style='color: #349717;'> Node.js</span> ?")
+   .typeString("<span style='color: #5035C6;'> PHP</span> ?")
    .pauseFor(1000)
-   .deleteChars(9)
-   .typeString("<span style='color: #4DB6AC;'> Full-Stack JS</span> ?")
-   .pauseFor(1000)
-   .deleteChars(15)
-   .pauseFor(1000)
+   .deleteChars(5)
    .typeString("<span style='color: #ff6910;'> Passionné</span> !")
    .start();
 
@@ -146,21 +142,21 @@ const scenePortfolioVague1 = new ScrollMagic.Scene({
 /**
  * Vague 2
  */
-// const itemPortfolioVague2 = document.querySelectorAll('.vague2');
+const itemPortfolioVague2 = document.querySelectorAll('.vague2');
 
-// const tlPortfolioVague2 = new TimelineMax();
+const tlPortfolioVague2 = new TimelineMax();
 
-// tlPortfolioVague2
-// .staggerFrom(itemPortfolioVague2, 1, {opacity: 0}, 0.2, '-=0.5');
+tlPortfolioVague2
+.staggerFrom(itemPortfolioVague2, 1, {opacity: 0}, 0.2, '-=0.5');
 
-// const scenePortfolioVague2 = new ScrollMagic.Scene({
-//    triggerElement: itemPortfolioVague1,
-//    triggerHook: 0.2,
-//    reverse: false
-// })
-// .setTween(tlPortfolioVague2)
-// // .addIndicators()
-// .addTo(controller)
+const scenePortfolioVague2 = new ScrollMagic.Scene({
+   triggerElement: itemPortfolioVague1,
+   triggerHook: 0.2,
+   reverse: false
+})
+.setTween(tlPortfolioVague2)
+// .addIndicators()
+.addTo(controller)
 
 
 // Animation Compétences
