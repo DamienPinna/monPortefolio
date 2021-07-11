@@ -162,6 +162,25 @@ const scenePortfolioVague2 = new ScrollMagic.Scene({
    // .addIndicators()
    .addTo(controller)
 
+   /**
+ * Vague 3
+ */
+const itemPortfolioVague3 = document.querySelectorAll('.vague3');
+
+const tlPortfolioVague3 = new TimelineMax();
+
+tlPortfolioVague3
+   .staggerFrom(itemPortfolioVague3, 1, { opacity: 0 }, 0.2, '-=0.5');
+
+const scenePortfolioVague3 = new ScrollMagic.Scene({
+   triggerElement: itemPortfolioVague2,
+   triggerHook: 0.2,
+   reverse: false
+})
+   .setTween(tlPortfolioVague3)
+   // .addIndicators()
+   .addTo(controller)
+
 
 // Animation Compétences
 const sectionCompetences = document.querySelector('.section-range');
