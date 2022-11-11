@@ -1,415 +1,592 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:url" content="https://damienpinna.fr/" />
+    <meta
+      property="og:image"
+      content="https://damienpinna.fr/ressources/images/vignette.jpg"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Découvez mes réalisations" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:title" content="Portfolio de Damien PINNA" />
 
-   <meta property="og:url" content="https://damienpinna.fr/">
-   <meta property="og:image" content="https://damienpinna.fr/ressources/images/vignette.jpg">
-   <meta property="og:type" content="website">
-   <meta property="og:description" content="Découvez mes réalisations">
-   <meta property="og:locale" content="fr_FR">
-   <meta property="og:title" content="Portfolio de Damien PINNA">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Portfolio de Damien PINNA" />
+    <meta name="twitter:creator" content="@DamienPinna" />
+    <meta name="twitter:title" content="Portfolio de Damien PINNA" />
+    <meta name="twitter:description" content="Découvez mes réalisations" />
+    <meta
+      name="twitter:image"
+      content="https://damienpinna.fr/ressources/images/vignette.jpg"
+    />
 
-   <meta name="twitter:card" content="summary_large_image">
-   <meta name="twitter:site" content="@Portfolio de Damien PINNA">
-   <meta name="twitter:creator" content="@DamienPinna">
-   <meta name="twitter:title" content="Portfolio de Damien PINNA">
-   <meta name="twitter:description" content="Découvez mes réalisations">
-   <meta name="twitter:image" content="https://damienpinna.fr/ressources/images/vignette.jpg">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <title>portfolio Damien PINNA</title>
+    <link rel="stylesheet" href="./prefixed/style.css" />
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-   <title>portfolio Damien PINNA</title>
-   <link rel="stylesheet" href="./prefixed/style.css">
-   <!-- <link rel="stylesheet" href="./style.css"> -->
-   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-   <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins&display=swap" rel="stylesheet">
-</head>
-
-<body>
-   <!-- Bouton burger menu -->
-   <div class="btn-rond-menu">
+  <body>
+    <!-- Bouton burger menu -->
+    <div class="btn-rond-menu">
       <div class="container-lignes">
-         <div class="ligne">
+        <div class="ligne"></div>
+      </div>
+    </div>
 
-         </div>
-      </div>
-   </div>
-
-   <!-- Navigation verticale -->
-   <nav class="nav-gauche">
-
+    <!-- Navigation verticale -->
+    <nav class="nav-gauche">
       <div class="blocs-menu">
-         <div class="cercle-portrait">
-            <img src="./ressources/images/portrait.jpg" alt="portrait de damien pinna">
-         </div>
-      </div>
-
-      <div class="blocs-menu">
-         <span class="nav-menu-item">
-            <a href="#accueil">
-               Accueil
-            </a>
-         </span>
-      </div>
-      <div class="blocs-menu">
-         <span class="nav-menu-item">
-            <a href="#presentation">
-               Présentation
-            </a>
-         </span>
-      </div>
-      <div class="blocs-menu">
-         <span class="nav-menu-item">
-            <a href="#portfolio">
-               Portfolio
-            </a>
-         </span>
-      </div>
-      <div class="blocs-menu">
-         <span class="nav-menu-item">
-            <a href="#range">
-               Compétences
-            </a>
-         </span>
-      </div>
-      <div class="blocs-menu">
-         <span class="nav-menu-item">
-            <a href="#experiences">
-               Expériences
-            </a>
-         </span>
-      </div>
-      <div class="blocs-menu">
-         <span class="nav-menu-item">
-            <a href="#contact">
-               Contact
-            </a>
-         </span>
+        <div class="cercle-portrait">
+          <img
+            src="./ressources/images/portrait.jpg"
+            alt="portrait de damien pinna"
+          />
+        </div>
       </div>
 
       <div class="blocs-menu">
-         <div class="logo-cercle">
-            <a href="mailto:damien.pinna@gmail.com">
-               <img src="./ressources/images/contact.svg" alt="logo contact">
-            </a>
-         </div>
+        <span class="nav-menu-item">
+          <a href="#accueil"> Accueil </a>
+        </span>
+      </div>
+      <div class="blocs-menu">
+        <span class="nav-menu-item">
+          <a href="#presentation"> Présentation </a>
+        </span>
+      </div>
+      <div class="blocs-menu">
+        <span class="nav-menu-item">
+          <a href="#portfolio"> Portfolio </a>
+        </span>
+      </div>
+      <div class="blocs-menu">
+        <span class="nav-menu-item">
+          <a href="#range"> Compétences </a>
+        </span>
+      </div>
+      <div class="blocs-menu">
+        <span class="nav-menu-item">
+          <a href="#experiences"> Expériences </a>
+        </span>
+      </div>
+      <div class="blocs-menu">
+        <span class="nav-menu-item">
+          <a href="#contact"> Contact </a>
+        </span>
       </div>
 
-   </nav>
+      <div class="blocs-menu">
+        <div class="logo-cercle">
+          <a href="mailto:damien.pinna@gmail.com">
+            <img src="./ressources/images/contact.svg" alt="logo contact" />
+          </a>
+        </div>
+      </div>
+    </nav>
 
-   <!-- Accueil -->
+    <!-- Accueil -->
 
-   <section class="accueil" id="accueil">
+    <section class="accueil" id="accueil">
       <h1>Bienvenue sur mon portfolio</h1>
       <p class="texte-animation"></p>
       <a href="#portfolio" class="btn-accueil btn-accueil1">Portfolio</a>
       <a href="#experiences" class="btn-accueil btn-accueil2">Expériences</a>
 
       <div class="medias">
-         <a href="https://github.com/DamienPinna" target="_blank">
-            <div class="media media1">
-               <img src="./ressources/images/github.svg" alt="icone github" class="icone-medias">
-            </div>
-         </a>
-         <a href="https://fr.linkedin.com/in/damien-pinna-166b451b" target="_blank">
-            <div class="media media2">
-               <img src="./ressources/images/linkedin.svg" alt="icone linkdin" class="icone-medias">
-            </div>
-         </a>
-         <a href="https://twitter.com/DamienPinna" target="_blank">
-            <div class="media media3">
-               <img src="./ressources/images/twitter.svg" alt="icone twitter" class="icone-medias">
-            </div>
-         </a>
+        <a href="https://github.com/DamienPinna" target="_blank">
+          <div class="media media1">
+            <img
+              src="./ressources/images/github.svg"
+              alt="icone github"
+              class="icone-medias"
+            />
+          </div>
+        </a>
+        <a
+          href="https://fr.linkedin.com/in/damien-pinna-166b451b"
+          target="_blank"
+        >
+          <div class="media media2">
+            <img
+              src="./ressources/images/linkedin.svg"
+              alt="icone linkdin"
+              class="icone-medias"
+            />
+          </div>
+        </a>
+        <a href="https://twitter.com/DamienPinna" target="_blank">
+          <div class="media media3">
+            <img
+              src="./ressources/images/twitter.svg"
+              alt="icone twitter"
+              class="icone-medias"
+            />
+          </div>
+        </a>
       </div>
 
       <a href="#presentation">
-         <div class="btn-rond-fleche">
-            <img src="./ressources/images/arrowDown.svg" alt="logo flèche vers le bas" class="logo-btn-fleche">
-         </div>
+        <div class="btn-rond-fleche">
+          <img
+            src="./ressources/images/arrowDown.svg"
+            alt="logo flèche vers le bas"
+            class="logo-btn-fleche"
+          />
+        </div>
       </a>
-   </section>
+    </section>
 
-   <!-- Présentation -->
-   <section class="presentation" id="presentation">
+    <!-- Présentation -->
+    <section class="presentation" id="presentation">
       <h2 class="titre-presentation">Présentation</h2>
 
       <div class="container-presentation">
+        <div class="fond-forme"></div>
 
-         <div class="fond-forme"></div>
+        <div class="presentation-gauche">
+          <h3>Profil</h3>
+          <hr />
+          <p>
+            De nature curieuse, ayant le goût de l’apprentissage, aimant la
+            réalisation concrète et la recherche de solutions, j’ai été très
+            vite passionné par l’univers du développement web. Actuellement en
+            autoformation dans ce domaine je souhaite passer à l’étape
+            supérieure et en faire mon métier.
+          </p>
+          <br />
+          <p>
+            Je cherche donc à mettre à profit mon professionnalisme et
+            développer mes compétences au sein de votre entreprise dans
+            l’optique de devenir un expert sur lequel vous pourrez compter.
+          </p>
+        </div>
 
-         <div class="presentation-gauche">
-            <h3>Profil</h3>
-            <hr>
-            <p>De nature curieuse, ayant le goût de l’apprentissage, aimant la réalisation concrète et la recherche de
-               solutions, j’ai été très vite passionné par l’univers du développement web. Actuellement en autoformation
-               dans ce domaine je souhaite passer à l’étape supérieure et en faire mon métier.</p>
-            <br>
-            <p>Je cherche donc à mettre à profit mon professionnalisme et développer mes compétences au sein de votre
-               entreprise dans l’optique de devenir un expert sur lequel vous pourrez compter.</p>
-         </div>
-
-         <div class="presentation-droite">
-
-            <h3 class="titre-atout">Atouts / Savoir-être</h3>
-            <ul class="liste-presentation">
-               <li class="item-liste item1">
-                  <span class="chiffre-style">1.</span>
-                  <p class="texte-liste">Méthodique et rigoureux.</p>
-               </li>
-               <li class="item-liste item2">
-                  <span class="chiffre-style">2.</span>
-                  <p class="texte-liste">Autonome.</p>
-               </li>
-               <li class="item-liste item3">
-                  <span class="chiffre-style">3.</span>
-                  <p class="texte-liste">Observateur et analytique.</p>
-               </li>
-               <li class="item-liste item4">
-                  <span class="chiffre-style">4.</span>
-                  <p class="texte-liste">Soucieux du travail bien fait.</p>
-               </li>
-               <li class="item-liste item5">
-                  <span class="chiffre-style">5.</span>
-                  <p class="texte-liste">Curiosité intellectuelle.</p>
-               </li>
-            </ul>
-         </div>
-
+        <div class="presentation-droite">
+          <h3 class="titre-atout">Atouts / Savoir-être</h3>
+          <ul class="liste-presentation">
+            <li class="item-liste item1">
+              <span class="chiffre-style">1.</span>
+              <p class="texte-liste">Méthodique et rigoureux.</p>
+            </li>
+            <li class="item-liste item2">
+              <span class="chiffre-style">2.</span>
+              <p class="texte-liste">Autonome.</p>
+            </li>
+            <li class="item-liste item3">
+              <span class="chiffre-style">3.</span>
+              <p class="texte-liste">Observateur et analytique.</p>
+            </li>
+            <li class="item-liste item4">
+              <span class="chiffre-style">4.</span>
+              <p class="texte-liste">Soucieux du travail bien fait.</p>
+            </li>
+            <li class="item-liste item5">
+              <span class="chiffre-style">5.</span>
+              <p class="texte-liste">Curiosité intellectuelle.</p>
+            </li>
+          </ul>
+        </div>
       </div>
-   </section>
+    </section>
 
-   <!-- portfolio -->
-   <section class="portfolio" id="portfolio">
-      <h2 class="titre-portfolio">Mon portfolio</h2>
+    <!-- portfolio -->
+    <section class="portfolio" id="portfolio">
+      <h2 class="titre-portfolio"></h2>
 
       <div class="container-portfolio">
+        <div class="item vague1">
+          <div class="container-img-portfolio">
+            <img
+              src="./ressources/images/cover_ohmyfood_v2.jpg"
+              alt="image du projet ohmyfood_v2"
+            />
+          </div>
+          <h3>Ohmyfood</h3>
+          <p>
+            Page statique réalisée en suivant une maquette mobile uniquement.
+          </p>
+          <p><span class="bold">Technologies utilisées :</span> HTML, SASS</p>
+          <a
+            href="https://damienpinna.github.io/ohmyfood_v2/index.html"
+            class="btn-projets"
+            target="_blank"
+            >Découvrez le projet</a
+          >
+        </div>
 
-         <div class="item vague1">
-            <div class="container-img-portfolio">
-               <img src="./ressources/images/moncv.png" alt="image du projet mon CS en ligne">
-            </div>
-            <h3>CV en ligne</h3>
-            <p>CV en ligne réalisé dans le cadre du parcours "Développeur Web" d'Openclassrooms.</p>
-            <p><span class="bold">Technologies utilisées :</span> HTML, CSS</p>
-            <a href="https://damienpinna.github.io/monCV/" class="btn-projets" target="_blank">Découvrez le projet</a>
-         </div>
-
-         <div class="item vague1">
-            <div class="container-img-portfolio">
-               <img src="./ressources/images/ohmyfood.png" alt="image du projet ohmyfood">
-            </div>
-            <h3>Cartes de menus</h3>
-            <p>Site réalisé dans le cadre du parcours "Développeur Web" d'Openclassrooms.</p>
-            <p><span class="bold">Technologies utilisées :</span> HTML, SASS</p>
-            <a href="https://damienpinna.github.io/ohmyfood/" class="btn-projets" target="_blank">Découvrez le
-               projet</a>
-         </div>
-
-      </div>
-
-      <div class="container-portfolio">
-
-         <div class="item vague2">
-            <div class="container-img-portfolio">
-               <img src="./ressources/images/oriteddies.png" alt="image du projet oriteddies">
-            </div>
-            <h3>Oriteddies</h3>
-            <p>Site e-commerce où j'ai réalisé le frontend et le backend.</p>
-            <p><span class="bold">Technologies utilisées :</span> Bootstrap, JS, PHP, MySQL</p>
-            <a href="https://oriteddies.damienpinna.fr" class="btn-projets" target="_blank">Découvrez le projet</a>
-         </div>
-
-         <div class="item vague2">
-            <div class="container-img-portfolio">
-               <img src="./ressources/images/reservia.png" alt="image du projet oriteddies">
-            </div>
-            <h3>Reservia</h3>
-            <p>Page statique réalisée en suivant une maquette desktop et mobile.</p>
-            <p><span class="bold">Technologies utilisées :</span> HTML, SASS</p>
-            <a href="https://damienpinna.github.io/reservia/" class="btn-projets" target="_blank">Découvrez le
-               projet</a>
-         </div>
-
+        <div class="item vague1">
+          <div class="container-img-portfolio">
+            <img
+              src="./ressources/images/cover_montblanc.png"
+              alt="image du projet montblanc"
+            />
+          </div>
+          <h3>Site design</h3>
+          <p>Intégration d'une maquette figma.<br />(Non visible sur mobile)</p>
+          <p><span class="bold">Technologies utilisées :</span> HTML, SASS</p>
+          <a
+            href="https://damienpinna.github.io/montblanc/"
+            class="btn-projets"
+            target="_blank"
+            >Découvrez le projet</a
+          >
+        </div>
       </div>
 
       <div class="container-portfolio">
+        <div class="item vague2">
+          <div class="container-img-portfolio">
+            <img
+              src="./ressources/images/cover_soda.png"
+              alt="image du projet soda"
+            />
+          </div>
+          <h3>Sodas</h3>
+          <p>Intégration d'une maquette figma.<br />(Non visible sur mobile)</p>
+          <p>
+            <span class="bold">Technologies utilisées :</span> HTML, SASS, JS
+          </p>
+          <a
+            href="https://damienpinna.github.io/soda/"
+            class="btn-projets"
+            target="_blank"
+            >Découvrez le projet</a
+          >
+        </div>
 
-         <div class="item vague3">
-            <div class="container-img-portfolio">
-               <img src="./ressources/images/cover_ohmyfood_v2.jpg" alt="image du projet oriteddies">
-            </div>
-            <h3>Ohmyfood</h3>
-            <p>Page statique réalisée en suivant une maquette mobile uniquement.</p>
-            <p><span class="bold">Technologies utilisées :</span> HTML, SASS</p>
-            <a href="https://damienpinna.github.io/ohmyfood_v2/index.html" class="btn-projets" target="_blank">Découvrez le projet</a>
-         </div>
-
+        <div class="item vague2">
+          <div class="container-img-portfolio">
+            <img
+              src="./ressources/images/reservia.png"
+              alt="image du projet oriteddies"
+            />
+          </div>
+          <h3>Reservia</h3>
+          <p>
+            Page statique réalisée en suivant une maquette desktop et mobile.
+          </p>
+          <p><span class="bold">Technologies utilisées :</span> HTML, SASS</p>
+          <a
+            href="https://damienpinna.github.io/reservia/"
+            class="btn-projets"
+            target="_blank"
+            >Découvrez le projet</a
+          >
+        </div>
       </div>
-   </section>
 
-   <!-- Compétences -->
-   <section class="section-range" id="range">
+      <div class="container-portfolio">
+        <div class="item vague3">
+          <div class="container-img-portfolio">
+            <img
+              src="./ressources/images/cover_airpod_max.png"
+              alt="image du projet airpod max"
+            />
+          </div>
+          <h3>Casque</h3>
+          <p>Intégration d'une maquette figma.<br />(Non visible sur mobile)</p>
+          <p><span class="bold">Technologies utilisées :</span> HTML, SASS</p>
+          <a
+            href="https://damienpinna.github.io/airpodmax/"
+            class="btn-projets"
+            target="_blank"
+            >Découvrez le projet</a
+          >
+        </div>
+
+        <div class="item vague3">
+          <div class="container-img-portfolio">
+            <img
+              src="./ressources/images/oriteddies.png"
+              alt="image du projet oriteddies"
+            />
+          </div>
+          <h3>Oriteddies</h3>
+          <p>Site e-commerce où j'ai réalisé le frontend et le backend.</p>
+          <p>
+            <span class="bold">Technologies utilisées :</span> Bootstrap, JS,
+            PHP, MySQL
+          </p>
+          <a
+            href="https://oriteddies.damienpinna.fr"
+            class="btn-projets"
+            target="_blank"
+            >Découvrez le projet</a
+          >
+        </div>
+      </div>
+
+      <div class="container-portfolio">
+        <div class="item vague4">
+          <div class="container-img-portfolio">
+            <img
+              src="./ressources/images/ohmyfood.png"
+              alt="image du projet ohmyfood"
+            />
+          </div>
+          <h3>Cartes de menus</h3>
+          <p>
+            Site réalisé dans le cadre du parcours "Développeur Web"
+            d'Openclassrooms.
+          </p>
+          <p><span class="bold">Technologies utilisées :</span> HTML, SASS</p>
+          <a
+            href="https://damienpinna.github.io/ohmyfood/"
+            class="btn-projets"
+            target="_blank"
+            >Découvrez le projet</a
+          >
+        </div>
+
+        <div class="item vague4">
+          <div class="container-img-portfolio">
+            <img
+              src="./ressources/images/moncv.png"
+              alt="image du projet mon CS en ligne"
+            />
+          </div>
+          <h3>CV en ligne</h3>
+          <p>
+            CV en ligne réalisé dans le cadre du parcours "Développeur Web"
+            d'Openclassrooms.
+          </p>
+          <p><span class="bold">Technologies utilisées :</span> HTML, CSS</p>
+          <a
+            href="https://damienpinna.github.io/monCV/"
+            class="btn-projets"
+            target="_blank"
+            >Découvrez le projet</a
+          >
+        </div>
+      </div>
+
+      <!-- <div class="container-portfolio">
+        <div class="item vague5">
+          <div class="container-img-portfolio">
+            <img
+              src="./ressources/images/ohmyfood.png"
+              alt="image du projet ohmyfood"
+            />
+          </div>
+          <h3>Cartes de menus</h3>
+          <p>
+            Site réalisé dans le cadre du parcours "Développeur Web"
+            d'Openclassrooms.
+          </p>
+          <p><span class="bold">Technologies utilisées :</span> HTML, SASS</p>
+          <a
+            href="https://damienpinna.github.io/ohmyfood/"
+            class="btn-projets"
+            target="_blank"
+            >Découvrez le projet</a
+          >
+        </div>
+
+        <div class="item vague5">
+          <div class="container-img-portfolio">
+            <img
+              src="./ressources/images/moncv.png"
+              alt="image du projet mon CS en ligne"
+            />
+          </div>
+          <h3>CV en ligne</h3>
+          <p>
+            CV en ligne réalisé dans le cadre du parcours "Développeur Web"
+            d'Openclassrooms.
+          </p>
+          <p><span class="bold">Technologies utilisées :</span> HTML, CSS</p>
+          <a
+            href="https://damienpinna.github.io/monCV/"
+            class="btn-projets"
+            target="_blank"
+            >Découvrez le projet</a
+          >
+        </div>
+      </div> -->
+    </section>
+
+    <!-- Compétences -->
+    <section class="section-range" id="range">
       <h2 class="titre-competences">Mes compétences</h2>
       <div class="grille-skill">
-         <div class="container-range">
-            <p class="label-skill">HTML</p>
-            <p class="number-skill">80%</p>
-            <div class="barre-skill b1"></div>
-            <div class="barre-grise"></div>
-         </div>
-         <div class="container-range">
-            <p class="label-skill">CSS</p>
-            <p class="number-skill">60%</p>
-            <div class="barre-skill b2"></div>
-            <div class="barre-grise"></div>
-         </div>
-         <div class="container-range">
-            <p class="label-skill">JavaScript</p>
-            <p class="number-skill">65%</p>
-            <div class="barre-skill b3"></div>
-            <div class="barre-grise"></div>
-         </div>
-         <div class="container-range">
-            <p class="label-skill">Bootstrap</p>
-            <p class="number-skill">80%</p>
-            <div class="barre-skill b4"></div>
-            <div class="barre-grise"></div>
-         </div>
-         <div class="container-range">
-            <p class="label-skill">Vue.js</p>
-            <p class="number-skill">45%</p>
-            <div class="barre-skill b5"></div>
-            <div class="barre-grise"></div>
-         </div>
-         <div class="container-range">
-            <p class="label-skill">PHP</p>
-            <p class="number-skill">60%</p>
-            <div class="barre-skill b6"></div>
-            <div class="barre-grise"></div>
-         </div>
+        <div class="container-range">
+          <p class="label-skill">HTML</p>
+          <p class="number-skill">80%</p>
+          <div class="barre-skill b1"></div>
+          <div class="barre-grise"></div>
+        </div>
+        <div class="container-range">
+          <p class="label-skill">CSS</p>
+          <p class="number-skill">60%</p>
+          <div class="barre-skill b2"></div>
+          <div class="barre-grise"></div>
+        </div>
+        <div class="container-range">
+          <p class="label-skill">JavaScript</p>
+          <p class="number-skill">75%</p>
+          <div class="barre-skill b3"></div>
+          <div class="barre-grise"></div>
+        </div>
+        <div class="container-range">
+          <p class="label-skill">Bootstrap</p>
+          <p class="number-skill">70%</p>
+          <div class="barre-skill b4"></div>
+          <div class="barre-grise"></div>
+        </div>
+        <div class="container-range">
+          <p class="label-skill">Vue.js</p>
+          <p class="number-skill">45%</p>
+          <div class="barre-skill b5"></div>
+          <div class="barre-grise"></div>
+        </div>
+        <div class="container-range">
+          <p class="label-skill">PHP</p>
+          <p class="number-skill">75%</p>
+          <div class="barre-skill b6"></div>
+          <div class="barre-grise"></div>
+        </div>
       </div>
-   </section>
+    </section>
 
-   <!-- Expérience -->
-   <section class="travail-experience" id="experiences">
+    <!-- Expérience -->
+    <section class="travail-experience" id="experiences">
       <h2 class="titre-travail-experience">Mes expériences</h2>
 
       <div class="container-experience-travail">
-         <div class="barre-verticale">
-            <div class="boule-icon">
-               <img src="ressources/images/folder-open-regular.svg" alt="dossier">
-            </div>
-            <div class="boule-icon">
-               <img src="ressources/images/toolbox-solid.svg" alt="boite à outils">
-            </div>
-            <div class="boule-icon">
-               <img src="ressources/images/envelope-regular.svg" alt="enveloppe">
-            </div>
-            <div class="boule-icon">
-               <img src="ressources/images/plane.svg" alt="icone gauche" class="avion">
-            </div>
-         </div>
+        <div class="barre-verticale">
+          <div class="boule-icon">
+            <img
+              src="ressources/images/folder-open-regular.svg"
+              alt="dossier"
+            />
+          </div>
+          <div class="boule-icon">
+            <img
+              src="ressources/images/toolbox-solid.svg"
+              alt="boite à outils"
+            />
+          </div>
+          <div class="boule-icon">
+            <img src="ressources/images/envelope-regular.svg" alt="enveloppe" />
+          </div>
+          <div class="boule-icon">
+            <img
+              src="ressources/images/plane.svg"
+              alt="icone gauche"
+              class="avion"
+            />
+          </div>
+        </div>
 
-         <div class="flex-container-bloc-experience">
-
-            <div class="bloc bloc1">
-               <div class="contenu-bloc">
-                  <p class="titre-section-bloc">COPROTEC, Déc 2011 - Aujourd'hui</p>
-                  <p class="intitule-poste">Référent technique CEE</p>
-                  <p class="texte-section">
-                     Mon poste actuel consiste à s'occuper du processus de constitution d'un dossier dans le cadre du
-                     dispositif des Certificats d'Economies d'Energie. Mon périmètre d'actions démarre à l'initiation du
-                     dossier jusqu'à sa transmission à notre client.
-                     En plus de cela je m'occupe de la gestion d'une bibliothèque technique référençant des produits
-                     éligibles à ce dispositif, le paiement de factures, l'établissement de reportings et du support
-                     (réclamations, cas particuliers, remonté de problématiques, aide à l'équipe ...).
-                  </p>
-               </div>
+        <div class="flex-container-bloc-experience">
+          <div class="bloc bloc1">
+            <div class="contenu-bloc">
+              <p class="titre-section-bloc">COPROTEC, Déc 2011 - Aujourd'hui</p>
+              <p class="intitule-poste">Référent technique CEE</p>
+              <p class="texte-section">
+                Mon poste actuel consiste à s'occuper du processus de
+                constitution d'un dossier dans le cadre du dispositif des
+                Certificats d'Economies d'Energie. Mon périmètre d'actions
+                démarre à l'initiation du dossier jusqu'à sa transmission à
+                notre client. En plus de cela je m'occupe de la gestion d'une
+                bibliothèque technique référençant des produits éligibles à ce
+                dispositif, le paiement de factures, l'établissement de
+                reportings et du support (réclamations, cas particuliers,
+                remonté de problématiques, aide à l'équipe ...).
+              </p>
             </div>
+          </div>
 
-            <div class="bloc bloc2">
-               <div class="contenu-bloc">
-                  <p class="titre-section-bloc">SEA, Juillet 2011 - Nov 2011</p>
-                  <p class="intitule-poste">Monteur / Câbleur</p>
-                  <p class="texte-section">Dans le cadre d'une mission intérimaire, j'ai été amené à assembler des
-                     coffrets életriques, à y installer les différents dispositifs électriques et à cabler le tout. J'ai
-                     également ponctuellement été mené à cabler des armoires électriques destinées à l'industrie.</p>
-               </div>
+          <div class="bloc bloc2">
+            <div class="contenu-bloc">
+              <p class="titre-section-bloc">SEA, Juillet 2011 - Nov 2011</p>
+              <p class="intitule-poste">Monteur / Câbleur</p>
+              <p class="texte-section">
+                Dans le cadre d'une mission intérimaire, j'ai été amené à
+                assembler des coffrets életriques, à y installer les différents
+                dispositifs électriques et à cabler le tout. J'ai également
+                ponctuellement été mené à cabler des armoires électriques
+                destinées à l'industrie.
+              </p>
             </div>
+          </div>
 
-            <div class="bloc bloc3">
-               <div class="contenu-bloc">
-                  <p class="titre-section-bloc">LA POSTE, 2010</p>
-                  <p class="intitule-poste">Facteur</p>
-                  <p class="texte-section">Dans le cadre d'un remplacement d'un arrêt maladie, j'ai assuré le trie et la
-                     distribution de courriers au centre ville de Ribeauvillé, j'ai également été en charge de récupérer
-                     le courrier dans les entreprises du cantont vert.</p>
-               </div>
+          <div class="bloc bloc3">
+            <div class="contenu-bloc">
+              <p class="titre-section-bloc">LA POSTE, 2010</p>
+              <p class="intitule-poste">Facteur</p>
+              <p class="texte-section">
+                Dans le cadre d'un remplacement d'un arrêt maladie, j'ai assuré
+                le trie et la distribution de courriers au centre ville de
+                Ribeauvillé, j'ai également été en charge de récupérer le
+                courrier dans les entreprises du cantont vert.
+              </p>
             </div>
-
-         </div>
+          </div>
+        </div>
       </div>
-   </section>
+    </section>
 
-   <!-- Parallax -->
-   <div class="section-parallax">
-      <p class="texte-partie">
-         55 cours Udemy
-      </p>
-      <p class="texte-partie">
-         30 projets
-      </p>
-      <p class="texte-partie">
-         7 repositories
-      </p>
-   </div>
+    <!-- Parallax -->
+    <div class="section-parallax">
+      <p class="texte-partie">55 cours Udemy</p>
+      <p class="texte-partie">30 projets</p>
+      <p class="texte-partie">7 repositories</p>
+    </div>
 
-   <!-- Contact -->
-   <section class="section-contact" id="contact">
+    <!-- Contact -->
+    <section class="section-contact" id="contact">
       <h2><strong>Rentrons</strong> en contact</h2>
 
       <div class="container-form">
-         <form id="contact-form" action="#" method="POST" class="form-bloc">
-
-            <div class="form-groupe">
-               <label for="prenom">Prénom</label>
-               <input type="text" maxlength="16" id="prenom" name="prenom">
-               <p class="comments"></p>
-            </div>
-            <div class="form-groupe">
-               <label for="nom">Nom</label>
-               <input type="text" maxlength="16" id="nom" name="nom">
-               <p class="comments"></p>
-            </div>
-            <div class="form-groupe">
-               <label for="nom">Email</label>
-               <input type="email" maxlength="30" id="email" name="email">
-               <p class="comments"></p>
-            </div>
-            <div class="form-groupe">
-               <textarea id="message" name="message" placeholder="Votre message"></textarea>
-               <p class="comments"></p>
-            </div>
-            <div class="form-groupe">
-               <input type="submit" value="ENVOYER" class="btn-submit">
-            </div>
-         </form>
+        <form id="contact-form" action="#" method="POST" class="form-bloc">
+          <div class="form-groupe">
+            <label for="prenom">Prénom</label>
+            <input type="text" maxlength="16" id="prenom" name="prenom" />
+            <p class="comments"></p>
+          </div>
+          <div class="form-groupe">
+            <label for="nom">Nom</label>
+            <input type="text" maxlength="16" id="nom" name="nom" />
+            <p class="comments"></p>
+          </div>
+          <div class="form-groupe">
+            <label for="nom">Email</label>
+            <input type="email" maxlength="30" id="email" name="email" />
+            <p class="comments"></p>
+          </div>
+          <div class="form-groupe">
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Votre message"
+            ></textarea>
+            <p class="comments"></p>
+          </div>
+          <div class="form-groupe">
+            <input type="submit" value="ENVOYER" class="btn-submit" />
+          </div>
+        </form>
       </div>
-   </section>
+    </section>
 
-   <footer>
-      Tous Droits réservés &copy;
-   </footer>
+    <footer>Tous Droits réservés &copy;</footer>
 
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-   <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-   <script src="./app.js"></script>
-</body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="./app.js"></script>
+  </body>
 </html>
